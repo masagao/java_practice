@@ -3,9 +3,8 @@ class Variable {
     int a = 20;
     double b = 0.5;
     double c = a * b;
-    int d = (int)(a * b);
+    int d = (int)(a * b);;
     System.out.println(c);
-    System.out.println((int)b);
     System.out.println(d);
   }
 }
