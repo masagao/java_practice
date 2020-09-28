@@ -1,15 +1,15 @@
 class ProductItem {
-  String name;
+  char name;
   int price;
-  public ProductItem(String name, int price) {
-    this.name = name;
-    this.price = price;
+
+  public String toString() {
+    return "[" + this.name + "," + this.price + "]";
   }
 
   public static void main(String[] args) {
-    String name = "PC";
-    int price = 100000;
-    ProductItem pi = new ProductItem(name, price);
-    System.out.println("name = " + pi.name + ", price= " + pi.price);
+    ProductItem pi = new ProductItem();
+    pi.name = 't';
+    pi.price = 100;
+    System.out.println(pi.toString());
   }
 }
