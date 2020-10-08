@@ -14,7 +14,7 @@ class Rectangle {
   }
 
   int getArea() {
-    return width * height;
+    return this.width * this.height;
   }
 
   static int getArea(Rectangle rect) {
@@ -25,10 +25,13 @@ class Rectangle {
     Rectangle r = new Rectangle(10, 20);
     System.out.println(r.number);
 
-    Rectangle s = new Rectangle(20, 10);
+    Rectangle s = new Rectangle(200, 10);
     System.out.println(s.number);
 
     System.out.println(Rectangle.number);
     System.out.println(r.number);
+
+    System.out.println(r.getArea());
+    System.out.println(Rectangle.getArea(s));
   }
 }
