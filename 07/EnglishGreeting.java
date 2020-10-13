@@ -18,18 +18,27 @@ abstract class Greeting {
   public abstract String morningGreeting();
 }
 
-public class JapaneseGreeting extends Greeting {
+public class EnglishGreeting extends Greeting {
+  public EnglishGreeting() {
+    setName("英語");
+  }
+  public String morningGreeting() {
+    return "Good Morning";
+  }
+
+  public static void main(String[] args) {
+    EnglishGreeting g = new EnglishGreeting();
+    System.out.println(g.getName());
+    System.out.println(g.morningGreeting());
+  }
+}
+
+class JapaneseGreeting extends Greeting {
   public JapaneseGreeting() {
     setName("日本語");
   }
 
   public String morningGreeting() {
     return "おはようございます";
-  }
-
-  public static void main(String[] args) {
-    JapaneseGreeting g = new JapaneseGreeting();
-    System.out.println(g.getName());
-    System.out.println(g.morningGreeting());
   }
 }
