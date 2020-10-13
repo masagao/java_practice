@@ -1,25 +1,38 @@
 public class ConstructOrder {
   public static void main(String[] args) {
-    System.out.println("クラスAのインスタンスaを生成");
-    A a = new A();
-    System.out.println("クラスBのインスタンスbを生成");
-    B b = new B();
-    System.out.println("クラスBのインスタンスbbを生成");
-    B bb = new B("こんにちは");
+    System.out.println("==-");
+    new A();
+    System.out.println("=-");
+    new B();
+    System.out.println("=-");
+    new A(123);
+    System.out.println("=-");
+    new B(456);
+    System.out.println("=-");
+    new B("test");
+    System.out.println("=-");
   }
 }
+
 class A {
   A() {
-    System.out.println("Aのデフォルトコンストラクタ");
+    System.out.println("1:A()");
+  }
+  A(int x) {
+    System.out.println("2:A(int x)");
   }
 }
-
 class B extends A {
   B() {
-    System.out.println("Bのデフォルトコンストラクタ");
+    System.out.println("3: B()");
   }
 
-  B(String msg) {
-    System.out.println("コンストラクタB(String)へ渡された引数は\"" + msg + "\"です。");
+  B(int x) {
+    System.out.println("4: B(intx)");
+  }
+
+  B(String s) {
+    super(789);
+    System.out.println("5: B(String s)");
   }
 }
