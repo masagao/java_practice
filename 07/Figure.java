@@ -11,9 +11,27 @@ class Figure {
     System.out.println(f.name);
     System.out.println(f.getArea());
 
-    f = new Square(10.0);
+    f = new Circle(10.0);
     System.out.println(f.name);
     System.out.println(f.getArea());
+  }
+}
+
+class Circle extends Figure {
+  protected double radius;
+  public Circle() {
+    this.name = "Circle";
+    setRadius(1.0);
+  }
+  public Circle(double radius) {
+    this.name = "Circle";
+    setRadius(radius);
+  }
+  protected void setRadius(double radius) {
+    this.radius = radius;
+  }
+  public double getArea() {
+    return Math.PI*radius*radius;
   }
 }
 
