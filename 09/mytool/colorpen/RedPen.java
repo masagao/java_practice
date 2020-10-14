@@ -1,9 +1,8 @@
 package mytool.colorpen;
-import mytool.*;
+import cooking.MyItem;
 
-public class RedPen extends MyPen {
+public class RedPen extends MyItem {
   public String getName() {
-    System.out.println(penCount);
     return "Red Pen";
   }
 }

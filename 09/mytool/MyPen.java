@@ -1,9 +1,8 @@
 package mytool;
+import cooking.MyItem;
 
-public class MyPen {
-  protected int penCount = 1;
+public class MyPen extends MyItem {
   public String getName() {
-    System.out.println(penCount);
     return "Pen";
   }
 }
