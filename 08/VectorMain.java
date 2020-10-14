@@ -9,7 +9,7 @@ public class VectorMain{
 	Vector2D v2 = new Vector2D(x2, y2);
 	System.out.println("v1 = " + v1);
 	System.out.println("v2 = " + v2);
-	System.out.println("scalar*v1 = " + scalar + "*" + v1 + " = " + 
+	System.out.println("scalar*v1 = " + scalar + "*" + v1 + " = " +
 			   v1.scalarMultiplication(scalar));
 	System.out.println("v1 * v2 = " + v1 + " * " + v2 + " = " +
 			   v1.innerProduct(v2));
