@@ -1,24 +1,21 @@
 public class Kinko implements Lockable{
     boolean isLock = false;
     int deposit = 0;
+    String keyToken;
 
     public Kinko(int d){
         deposit = d;
     }
 
-    public boolean lock(){
+    public boolean lock(MyKey k){
+        keyToken = k.getKeyToken();
         isLock = true;
         return isLock;
     }
 
-    public boolean unlock(){
-        isLock = true;
-        return isLock;
-    }
-
-    public boolean unlock(int t){
-        if(deposit >= t){
-            isLock = true;
+    public boolean unlock(MyKey k){
+        if(keyToken == k.getKeyToken()) {
+            isLock = false;
         }
         return isLock;
     }

@@ -1,4 +1,4 @@
 public interface Lockable {
-    boolean lock();
-    boolean unlock();
+    boolean lock(MyKey k);
+    boolean unlock(MyKey k);
 }

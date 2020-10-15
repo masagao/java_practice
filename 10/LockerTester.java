@@ -1,13 +1,13 @@
 class LockerTester {
   public static void main(String[] args) {
     Kinko k = new Kinko(1000);
-    k.printDeposit();
-
     LockableJewelBox j = new LockableJewelBox(false);
-    j.printEmpty();
 
-    Lockable[] l = {k, j};
-    for(Lockable i : l) i.lock();
+    k.lock(new KeyWord1());
+    j.lock(new KeyWord2());
+
+    k.unlock(new KeyWord2());
+    j.unlock(new KeyWord2());
 
     k.printDeposit();
     j.printEmpty();
