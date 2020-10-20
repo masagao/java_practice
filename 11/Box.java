@@ -13,3 +13,4 @@ class Box implements PrintState{
     else System.out.println("中に何か入っています。");
   }
 }
+
