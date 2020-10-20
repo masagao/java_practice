@@ -1,0 +1,3 @@
+interface Learner {
+  String getLearning();
+}
