@@ -12,7 +12,11 @@ public class Student extends Person implements Learner{
 	}
 
 	public Study getStudy(){
-    return study;
+    return this.study;
   }
+
+	public void printInfo(){
+		System.out.println( this.getName() + '/' + this.getAge() + '/' + this.study.getStudyName());
+	}
 
 }

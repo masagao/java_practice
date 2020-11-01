@@ -13,7 +13,7 @@ public class Person{
 		return this.age;
 	}
 
-    public void printInfo(){
-        System.out.println( this.getName());
-    }
+  public void printInfo(){
+    System.out.println( this.getName());
+  }
 }

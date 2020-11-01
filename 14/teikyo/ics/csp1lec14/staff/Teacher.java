@@ -12,7 +12,11 @@ public class Teacher extends Person implements Worker{
 	}
 
   public Job getJob(){
-    return new Lecturer();
+    return this.job;
   }
+
+	public void printInfo(){
+		System.out.println( this.getName() + '/' + this.getAge() + '/' + this.job.getJobName());
+	}
 
 }
