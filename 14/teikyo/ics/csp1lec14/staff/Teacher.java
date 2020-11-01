@@ -1,7 +1,7 @@
 package teikyo.ics.csp1lec14.staff;
 import teikyo.ics.csp1lec14.*;
 
-public class Teacher extends Person implements Worker{
+public class Teacher extends Person implements Worker, Settable{
 
   Job job = new Lecturer();
 
@@ -9,6 +9,11 @@ public class Teacher extends Person implements Worker{
 		this.name = "Taro";
 		this.age = 40;
 		this.job = new Lecturer();
+	}
+
+	public void setValues(String name, int age) {
+		this.name = name;
+		this.age = age;
 	}
 
   public Job getJob(){
